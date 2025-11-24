@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Samuel Mwaura | Data Analyst Portfolio</title>
+    <meta name="description" content="Data Analyst | SQL • MySQL • Looker Studio | World Smartphone Market 2025 • Climate-Health Tracker • Pakistan Food Prices"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --dark: #1e1b4b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --accent: #ec4899;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light);
+            color: #333;
+            line-height: 1.7;
+        }
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        h1 { font-size: 3.8rem; margin-bottom: 0.5rem; }
+        h2 { color: var(--dark); text-align: center; margin: 4rem 0 2.5rem; font-size: 2.6rem; position: relative; }
+        h2::after {
+            content: ''; display: block; width: 80px; height: 4px; background: var(--primary); margin: 1rem auto; border-radius: 2px;
+        }
+        .subtitle { font-size: 1.5rem; opacity: 0.95; font-weight: 400; }
+        .about {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            padding: 2rem 0;
+        }
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+        }
+        .project-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background: #e2e8f0;
+        }
+        .project-info { padding: 1.8rem; }
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--dark);
+        }
+        .project-desc {
+            color: var(--gray);
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+        }
+        .tags {
+            display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.2rem 0;
+        }
+        .tag {
+            background: #e0e7ff;
+            color: var(--primary);
+            padding: 0.4rem 0.9rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.4rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 0.7rem;
+            margin-top: 0.5rem;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover { background: #4338ca; }
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        footer {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+            margin-top: 5rem;
+        }
+        .social-links a {
+            color: white;
+            font-size: 2rem;
+            margin: 0 1.2rem;
+            transition: opacity 0.3s;
+        }
+        .social-links a:hover { opacity: 0.7; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.9rem; }
+            .projects { grid-template-columns: 1fr; }
+        }
+		/* Wrapper with animated gradient glow */
+		.profile-pic-wrapper {
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		margin-bottom: 2rem;
+    		position: relative;
+    		width: 230px;
+    		height: 230px;
+    		border-radius: 50%;
+    		padding: 5px;
+    		background: linear-gradient(135deg, #4f46e5, #ec4899, #4f46e5);
+    		background-size: 400% 400%;
+    		animation: pulseGlow 6s ease infinite;
+    		box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.profile-pic-wrapper:hover {
+    		transform: scale(1.05);
+    		box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+		}
+
+		/* Pulse animation for gradient */
+			@keyframes pulseGlow {
+    		0% { background-position: 0% 50%; }
+    		50% { background-position: 100% 50%; }
+    		100% { background-position: 0% 50%; }
+		}
+
+		.profile-pic {
+    		width: 100%;
+   			height: 100%;
+    		border-radius: 50%;
+    		object-fit: cover;
+    		display: block;
+    		background: white; /* optional for smooth edges */
+		}
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+        	<div class="container">
+			<div class="profile-pic-wrapper">
+            <img src="images\-1_orig (1).jpeg" alt="Profile Picture" class="profile-pic">
+        	</div>
+            <h1>Samuel Mwaura</h1>
+            <p class="subtitle">Data Analyst • SQL • MySQL • Looker Studio</p>
+            <p>Transforming raw data into actionable insights through end-to-end analysis</p>
+        </div>
+    </header>
+
+    <section class="about container">
+        <h2>About Me</h2>
+        <p>	Hi, I'm <strong>Samuel</strong>, a passionate Data Analyst from Kenya specializing in <strong>SQL(Mysql,PostgreSQL) data cleaning, 
+			feature engineering, and interactive dashboards</strong>.
+			I enjoy building clean, well-structured datasets and turning them into dashboards, reports, and models that drive decision-making.
+			My analytical approach is grounded in both mathematical reasoning and practical problem-solving. I’m passionate 
+			about data quality, reproducible analytics, and insightful storytelling, 
+			and I’m always exploring ways to combine data with real-world impact. Whether it’s understanding global trends, optimizing 
+			systems, or building predictive models, I enjoy the challenge of discovering the story behind the numbers.
+		</p>
+     
+    </section>
+
+    <section class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects">
+
+            <!-- Project 1: World Smartphone Market 2025 -->
+            <div class="project-card">
+                <img src="images\phone.jpg" alt="Smartphone Market" class="project-img"/>
+                <div class="project-info">
+                    <h3 class="project-title">World Smartphone Market 2025</h3>
+                    <p class="project-desc">1000+ smartphone models analyzed with pricing, specs, battery, camera, and realistic ratings. Full feature engineering: price segments, value score, performance tier, battery efficiency.</p>
+                    <div class="tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Feature Engineering</span>
+                        <span class="tag">Value-for-Money Scoring</span>
+                        <span class="tag">Looker Studio</span>
+                        <span class="tag">ML Ready</span>
+                    </div>
+                    <a href="https://github.com/wanjikusam89-sketch/World-Smartphone-Market-2025" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="https://lookerstudio.google.com/reporting/f53164ed-575b-4688-bbad-153d66c01ce4" class="btn btn-secondary">Live Dashboard</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Global Climate-Health Impact Tracker -->
+            <div class="project-card">
+                <img src="images\health.jpg" alt="Climate Health" class="project-img"/>
+                <div class="project-info">
+                    <h3 class="project-title">Global Climate-Health Impact Tracker (2015–2025)</h3>
+                    <p class="project-desc">14,100 weekly records across 25 countries linking climate events (temperature, extreme weather) to health outcomes (respiratory, cardiovascular, vector-borne diseases).</p>
+                    <div class="tags">
+                        <span class="tag">Time Series</span>
+                        <span class="tag">Climate Analytics</span>
+                        <span class="tag">Health Outcomes</span>
+                        <span class="tag">Regional Comparison</span>
+                        <span class="tag">Policy Ready</span>
+                    </div>
+                    <a href="https://github.com/wanjikusam89-sketch/Global-Climate-Health-Impact-Tracker-2015-2025-" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="https://lookerstudio.google.com/reporting/4f25c95f-cd26-4f01-967a-66d5966a5fdb" class="btn btn-secondary">Live Dashboard</a>
+                </div>
+            </div>
+
+            <!-- Project 3: Pakistan Food Prices 2025 -->
+            <div class="project-card">
+                <img src="images\food prices.jpg" alt="Food Prices" class="project-img"/>
+                <div class="project-info">
+                    <h3 class="project-title">Pakistan Food Prices 2025</h3>
+                    <p class="project-desc">Monthly market survey data across major cities. Full pipeline: deduplication, standardization, seasonality, province mapping, inflation flags, and Ramadan price surge analysis.</p>
+                    <div class="tags">
+                        <span class="tag">Data Cleaning</span>
+                        <span class="tag">Inflation Analysis</span>
+                        <span class="tag">Seasonality</span>
+                        <span class="tag">Regional Disparity</span>
+                    </div>
+                    <a href="https://github.com/wanjikusam89-sketch/Pakistan-Food-Prices-2025" target="_blank" class="btn btn-primary">View on GitHub</a>
+                    <a href="https://lookerstudio.google.com/reporting/6bf6e097-7340-4b17-b543-376725552b07" class="btn btn-secondary">Live Dashboard</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Built by <strong>Mwaura - Data Analyst</strong> | Kenya</p>
+            <div class="social-links">
+                <a href="https://github.com/wanjikusam89-sketch" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        
+                <a href="https://www.linkedin.com/in/samuelmwaura2025/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Samuel Mwaura. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
